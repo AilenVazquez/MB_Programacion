@@ -14,77 +14,77 @@ public class TP4{
 
         // 2: Elimina los espacios de una cadena ingresada.
     
-            // String espacios= cadena.replace(" ", "");
-            // System.out.println("- Cadena sin espacios: "+ espacios);
+            String espacios= cadena.replace(" ", "");
+            System.out.println("- Cadena sin espacios: "+ espacios);
 
         // 3: Cuenta las vocales  de una String  ingresada.
 
-            // int contador = 0;
+            int contador = 0;
 
-            // char[] vocales={'a','e','i','o','u'};
+            char[] vocales={'a','e','i','o','u'};
 
-            // for(int i = 0; i< cadena.length(); i++){
-            //     char letra = cadena.charAt(i);
+            for(int i = 0; i< cadena.length(); i++){
+                char letra = cadena.charAt(i);
 
-            //     for(int x=0; x<5; x++){
-            //         if (letra == vocales[x]){
-            //             contador++;
-            //         }
-            //     }
-            // }
+                for(int x=0; x<5; x++){
+                    if (letra == vocales[x]){
+                        contador++;
+                    }
+                }
+            }
 
-            // System.out.println("- La cadena tiene: "+ contador + " vocales");
+            System.out.println("- La cadena tiene: "+ contador + " vocales");
         
         // 4 Transforma una cadena a mayúsculas. 
 
-            // String mayusculas = cadena.toUpperCase();
-            // System.out.println("- Cadena en mayusculas: "+ mayusculas);
+            String mayusculas = cadena.toUpperCase();
+            System.out.println("- Cadena en mayusculas: "+ mayusculas);
 
         // 5: Compara dos cadenas ingresadas por teclado. Determinar sI son iguales.
 
-            // System.out.println("");
-            // System.out.print("Ingrese otra cadena: ");
+            System.out.println("");
+            System.out.print("Ingrese otra cadena: ");
 
-            // String cadena2 = entrada.nextLine();
+            String cadena2 = entrada.nextLine();
 
-            // Boolean comparacion = cadena.equals(cadena2);
+            Boolean comparacion = cadena.equals(cadena2);
 
-            // if(comparacion == true){
-            //     System.out.println("- Las cadenas son iguales");
-            // }else if(comparacion == false){
-            //     System.out.println("- Las cadenas no son iguales");
-            // }
+            if(comparacion == true){
+                System.out.println("- Las cadenas son iguales");
+            }else if(comparacion == false){
+                System.out.println("- Las cadenas no son iguales");
+            }
 
         // 6  Ingresar un nombre por teclado y mostrar con que letra comienza.
 
-            // System.out.println("");
-            // System.out.print("Ingrese un nombre: ");
-            // String nombre = entrada.nextLine();
-            // char primletra = nombre.charAt(0);
+            System.out.println("");
+            System.out.print("Ingrese un nombre: ");
+            String nombre = entrada.nextLine();
+            char primletra = nombre.charAt(0);
 
-            // System.out.println("- El nombre comienza con la letra: "+ primletra);
+            System.out.println("- El nombre comienza con la letra: "+ primletra);
 
         // 7.  Ingresar una cadena que contenga un punto y muestre lo que hay después del punto.
 
-            // System.out.println("");
-            // System.out.print("Ingrese 2 oraciones separadas por un '.': ");
+            System.out.println("");
+            System.out.print("Ingrese 2 oraciones separadas por un '.': ");
 
-            // String oraciones = entrada.nextLine();
-            // int punto = oraciones.indexOf(".");
+            String oraciones = entrada.nextLine();
+            int punto = oraciones.indexOf(".");
             
-            // int largoOracion = oraciones.length();
+            int largoOracion = oraciones.length();
             
-            // String segOracion = oraciones.substring(punto+1, largoOracion);
+            String segOracion = oraciones.substring(punto+1, largoOracion);
 
-            // System.out.println("- La segunda oracion es: "+ segOracion);
+            System.out.println("- La segunda oracion es: "+ segOracion);
 
         // 8. contar la cantidad de palabras de una string.
 
-            // System.out.println("");
-            // String[] palabras = oraciones.split(" ");
-            // int cantPalabras = palabras.length;
+            System.out.println("");
+            String[] palabras = oraciones.split(" ");
+            int cantPalabras = palabras.length;
 
-            // System.out.println("Hay "+ cantPalabras+ " palabras en la oracion");
+            System.out.println("Hay "+ cantPalabras+ " palabras en la oracion");
     
         // 9 Ingresar una dirección de correo y verificar que la longitud no supere los 12 caracteres. Tenga un @ y termine en . Com
 
@@ -138,35 +138,36 @@ public class TP4{
         // Si no cumple alguna de las condiciones mostrará el mensaje "cadena incorrecta, vuelva a ingresar".
 
             
-            // Boolean largo = false;
-            // Boolean mayus = false;
+            Boolean largo = false;
+            Boolean mayus = false;
 
-            // while (largo == false || mayus == false ) {
-            //     System.out.print("Ingrese una cadena que empiece con mayuscula y tenga minimo 8 caracteres: ");
-            //     String cad = entrada.nextLine();
-            //     char primeraLetra = cad.charAt(0);
+            while (largo == false || mayus == false ) {
+                System.out.print("Ingrese una cadena que empiece con mayuscula y tenga minimo 8 caracteres: ");
+                String cad = entrada.nextLine();
+                char primeraLetra = cad.charAt(0);
 
-            //     if(cad.length() > 8){
-            //         largo = true;
-            //     }else{
-            //         System.out.println("La cadena tiene que tener por lo menos 8 caracteres");
-            //     }
+                if(cad.length() > 8){
+                    largo = true;
+                }else{
+                    System.out.println("La cadena tiene que tener por lo menos 8 caracteres");
+                }
 
-            //     if(Character.isUpperCase(primeraLetra)){
-            //         mayus = true;
-            //     }else{
-            //         System.out.println("La cadena debe empezar por una letra mayuscula");
-            //     }
+                if(Character.isUpperCase(primeraLetra)){
+                    mayus = true;
+                }else{
+                    System.out.println("La cadena debe empezar por una letra mayuscula");
+                }
 
-            //     if(largo == false || mayus == false){
-            //         System.out.println("cadena incorrecta, vuelva a ingresar");
-            //     }
+                if(largo == false || mayus == false){
+                    System.out.println("cadena incorrecta, vuelva a ingresar");
+                }
 
-            // }
+            }
 
 
-            // if(largo == true && mayus == true){
-            //     System.out.println("cadena correcta");
-            // }
+            if(largo == true && mayus == true){
+                System.out.println("cadena correcta");
+            }
     }
+
 }
